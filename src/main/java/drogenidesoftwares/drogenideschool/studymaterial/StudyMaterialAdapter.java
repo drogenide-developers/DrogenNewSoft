@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import drogenidesoftwares.drogenideschool.R;
@@ -19,11 +20,11 @@ import drogenidesoftwares.drogenideschool.teachers.TeachersFilter;
 
 public class StudyMaterialAdapter extends RecyclerView.Adapter<StudyMaterialAdapter.StudyMaterialHolder> {
 
-    List<StudyMaterialModel> itemList,filterList;
+    ArrayList<StudyMaterialModel> itemList,filterList;
     private Context context;
     TeachersFilter filter;
 
-    public StudyMaterialAdapter(Context context, List<StudyMaterialModel> itemList) {
+    public StudyMaterialAdapter(Context context, ArrayList<StudyMaterialModel> itemList) {
         this.context = context;
         this.itemList = itemList;
         this.filterList=itemList;

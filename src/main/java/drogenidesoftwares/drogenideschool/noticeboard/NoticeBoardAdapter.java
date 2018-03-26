@@ -23,11 +23,11 @@ import drogenidesoftwares.drogenideschool.R;
 
 public class NoticeBoardAdapter extends RecyclerView.Adapter<NoticeBoardAdapter.NoticeBoardHolder>implements Filterable {
 
-    List<NoticeBoardModel> itemList,filterList;
+    ArrayList<NoticeBoardModel> itemList,filterList;
     private Context context;
     NoticeBoardFilter filter;
 
-    public NoticeBoardAdapter(Context context, List<NoticeBoardModel> itemList) {
+    public NoticeBoardAdapter(Context context, ArrayList<NoticeBoardModel> itemList) {
         this.context = context;
         this.itemList = itemList;
         this.filterList=itemList;
@@ -47,7 +47,7 @@ public class NoticeBoardAdapter extends RecyclerView.Adapter<NoticeBoardAdapter.
     public void onBindViewHolder(NoticeBoardHolder holder, final int position) {
         NoticeBoardHolder myHolder=holder;
         myHolder.noticeDateTv.setText(itemList.get(position).getNoticeDate());
-        myHolder.noticeDateTv.setText(itemList.get(position).getNoticeDate());
+        myHolder.noticeDescriptionTv.setText(itemList.get(position).getNoticeDescription());
        // myHolder.Photo.setImageResource(R.mipmap.ic_keyboard_arrow_right_black_36dp);
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

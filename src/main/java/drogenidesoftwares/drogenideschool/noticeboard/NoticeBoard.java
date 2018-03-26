@@ -11,6 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import drogenidesoftwares.drogenideschool.ItemOffSetDecoration;
 import drogenidesoftwares.drogenideschool.R;
 
@@ -21,16 +24,26 @@ public class NoticeBoard extends AppCompatActivity {
     private SearchView mSearchView;
     private MenuItem searchMenuItem;
     LinearLayoutManager linearLayoutManager;
+    ArrayList<NoticeBoardModel> itemList=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice_board);
         rView = (RecyclerView) findViewById(R.id.recycler_view);
-        rView.setHasFixedSize(true);
+        /*rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));
+*/
+        NoticeBoardModel boardModel=new NoticeBoardModel();
+        boardModel.setID("1");
+        boardModel.setNoticeDate("01/01/2018");
+        boardModel.setNoticeDescription("Hi all, New exam notification all MCA 1st year students notifiy that annual exam will be starts on next of december 1st. Please get your hall tickets, submit your project/practical submission with respect your teacher. Also check your attendece and get remarks from your class teacher, last date of submission is 30th Nov.");
+        itemList.add(boardModel);
+        rcAdapter=new NoticeBoardAdapter(this,itemList);
         rView.setLayoutManager(linearLayoutManager);
         rView.setAdapter(rcAdapter);
+
+
 
     }
     SearchView.OnQueryTextListener listener = new SearchView.OnQueryTextListener() {
@@ -53,7 +66,7 @@ public class NoticeBoard extends AppCompatActivity {
         searchMenuItem = menu.findItem(R.id.action_search);
         mSearchView = (SearchView) searchMenuItem.getActionView();
         mSearchView.setOnQueryTextListener(listener);
-        mSearchView.setQueryHint("Search Business type here...");
+        mSearchView.setQueryHint("Search Notification here...");
         int searchPlateId = mSearchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
         View searchPlate = mSearchView.findViewById(searchPlateId);
         if (searchPlate!=null) {
