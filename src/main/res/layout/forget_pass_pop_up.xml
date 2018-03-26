@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/bordered_gray"
+    android:theme="@style/Theme.AppCompat.Dialog">
+
+
+
+    <TextView
+        android:id="@+id/tv1_forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:text="Enter Your Registered Email Id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <EditText
+        android:id="@+id/tf_forget_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:textAlignment="center"
+        android:background="#ffffff"
+        android:layout_below="@+id/tv1_forget_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mrl_rippleDuration="350"
+        android:layout_centerHorizontal="true"
+        app:mrl_rippleFadeDuration="75"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleRoundedCorners="25dp"
+        android:layout_below="@+id/tf_forget_pass">
+    <Button
+        android:id="@+id/btn_send_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:background="@drawable/login_btn"
+        android:textColor="#ffffff"
+        android:text="Send"
+        />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:gravity="left">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleFadeDuration="75"
+        android:layout_gravity="left"
+        app:mrl_rippleDelayClick="true" >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:gravity="left"
+        app:navigationIcon="@mipmap/ic_menu_white_24dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+    <!--    <ImageView
+            android:id="@+id/navigation_menu"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/menu"/>
+
+
+
+        <ImageView
+            android:layout_width="61dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/wsd"/>-->
+
+
+</android.support.design.widget.AppBarLayout>
+
