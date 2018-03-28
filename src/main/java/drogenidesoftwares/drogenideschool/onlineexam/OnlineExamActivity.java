@@ -12,7 +12,7 @@ import drogenidesoftwares.drogenideschool.homework.HomeworkAdapter;
 public class OnlineExamActivity extends AppCompatActivity {
 
     RecyclerView rView;
-    HomeworkAdapter rcAdapter;
+    OnlineExamAdapter rcAdapter;
     LinearLayoutManager linearLayoutManager;
 
 

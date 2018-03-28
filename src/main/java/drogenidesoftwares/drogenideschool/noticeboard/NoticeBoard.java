@@ -36,11 +36,20 @@ public class NoticeBoard extends AppCompatActivity {
 */
         NoticeBoardModel boardModel=new NoticeBoardModel();
         boardModel.setID("1");
+        boardModel.setNoticeTitle("Exam Notice");
         boardModel.setNoticeDate("01/01/2018");
         boardModel.setNoticeDescription("Hi all, New exam notification all MCA 1st year students notifiy that annual exam will be starts on next of december 1st. Please get your hall tickets, submit your project/practical submission with respect your teacher. Also check your attendece and get remarks from your class teacher, last date of submission is 30th Nov.");
+
+        NoticeBoardModel boardModel1=new NoticeBoardModel();
+        boardModel1.setID("2");
+        boardModel1.setNoticeTitle("Holiday");
+        boardModel1.setNoticeDate("02/01/2018");
+        boardModel1.setNoticeDescription("Hi all, there is holiday on 2nd Jan 2018, an event is schedule on this day. Please note this.");
+
         itemList.add(boardModel);
+        itemList.add(boardModel1);
         rcAdapter=new NoticeBoardAdapter(this,itemList);
-        rView.setLayoutManager(linearLayoutManager);
+        rView.setLayoutManager(new LinearLayoutManager(this));
         rView.setAdapter(rcAdapter);
 
 

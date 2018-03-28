@@ -19,6 +19,7 @@ import android.widget.TextView;
 import drogenidesoftwares.drogenideschool.academic.AcademicsActivity;
 import drogenidesoftwares.drogenideschool.attendance.AttendanceActivity;
 import drogenidesoftwares.drogenideschool.behavior.BehaviorActivity;
+import drogenidesoftwares.drogenideschool.helper.FontManager;
 import drogenidesoftwares.drogenideschool.library.LibraryActivity;
 import drogenidesoftwares.drogenideschool.marks.MarksActivity;
 import drogenidesoftwares.drogenideschool.message.ChatActivity;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar;
     RelativeLayout updateinfo;
     RelativeLayout rlmessages,rlNotice,rlTeachers,rlSchedule,rlAttendance,rlMarks,rlPayement,rlLibrary,rlBehavior,rlAcademics;
-    TextView tv;
+    TextView tv,ico_msg,ico_teacher,ico_schedule,ico_attendence,ico_liberary,ico_marks,ico_academic,ico_behavior,ico_payment,ico_notice;
     private boolean isOpen=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,28 @@ public class MainActivity extends AppCompatActivity
         rlPayement=findViewById(R.id.rl_payment);
         rlBehavior=findViewById(R.id.rl_behaviour);
         rlAcademics=findViewById(R.id.rl_academics);
+
+        ico_academic=findViewById(R.id.txtIconAcademic);
+        ico_attendence=findViewById(R.id.txtIconAttendence);
+        ico_behavior=findViewById(R.id.txtIconBehaviour);
+        ico_liberary=findViewById(R.id.txtIconLiberary);
+        ico_marks=findViewById(R.id.txtIconMarks);
+        ico_msg=findViewById(R.id.txtIconMessage);
+        ico_notice=findViewById(R.id.txtIconNotice);
+        ico_payment=findViewById(R.id.txtIconPayment);
+        ico_schedule=findViewById(R.id.txtIconSchedule);
+        ico_teacher=findViewById(R.id.txtIconTeachers);
+
+        ico_teacher.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_schedule.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_payment.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_notice.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_msg.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_marks.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_liberary.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_behavior.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_attendence.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
+        ico_academic.setTypeface(FontManager.getTypeface(this,FontManager.REGULAR));
 
         drawer = (DuoDrawerLayout) findViewById(R.id.drawer_layout);
         toggle = new DuoDrawerToggle(this, drawer, toolbar,   R.string.navigation_drawer_open,

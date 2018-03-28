@@ -22,8 +22,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#AB47BC">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -33,39 +33,43 @@
                     app:mrl_rippleDelayClick="true" >
                 <RelativeLayout
                         android:id="@+id/rl_messages"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/img_message"
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/txtIconMessage"
+                        android:text="@string/fa_message"
+                        android:textSize="30sp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:background="@drawable/circle_accent"
+                        />
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_mail_outline_white_24dp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_message"
+                            android:layout_below="@+id/txtIconMessage"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Messages"
+                            android:layout_marginTop="15dp"
+                            android:text="Message"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
 
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/teachers">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -73,31 +77,37 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
                         android:id="@+id/rl_teachers"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/img_teacher"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_list_white_24dp" />
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tv_teachers"
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconTeachers"
+                            android:text="@string/fa_teacher"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_teacher"
+                            android:layout_below="@+id/txtIconTeachers"
                             android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
+                            android:layout_marginTop="15dp"
                             android:text="Teachers"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
+
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
@@ -111,8 +121,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/schedule">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -120,41 +130,45 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
                         android:id="@+id/rl_shedule"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/img_schedule"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_date_range_white_24dp" />
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconSchedule"
+                            android:text="@string/fa_schedule"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_schedule"
+                            android:layout_below="@+id/txtIconSchedule"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Schedules"
+                            android:layout_marginTop="15dp"
+                            android:text="Schedule"
+                            android:textSize="16sp"
+                            android:layout_centerHorizontal="true"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
+
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#18FFFF">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -162,31 +176,37 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
                         android:id="@+id/rl_attendance"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/img_attendance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_font_download_white_24dp" />
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tv_attendace"
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconAttendence"
+                            android:text="@string/fa_attendance"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_attendance"
+                            android:layout_below="@+id/txtIconAttendence"
                             android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
-                            android:text="Attendance"
+                            android:layout_marginTop="15dp"
+                            android:text="Attendence"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
+
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
@@ -200,8 +220,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/library">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -209,43 +229,47 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/rl_library">
-
-                        <ImageView
-                            android:id="@+id/img_library"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_library_books_white_24dp" />
+                        android:id="@+id/rl_library"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tv_schedule"
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconLiberary"
+                            android:text="@string/fa_liberary"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_library"
+                            android:layout_below="@+id/txtIconLiberary"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="15dp"
                             android:text="Library"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
+
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:id="@+id/ll_noticeboard"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/marks">
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -253,31 +277,133 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/rl_marks">
-
-                        <ImageView
-                            android:id="@+id/img_marks"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_import_contacts_white_24dp" />
+                        android:id="@+id/rl_marks"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tv_marks"
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconMarks"
+                            android:text="@string/fa_marks"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_marks"
+                            android:layout_below="@+id/txtIconMarks"
                             android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
+                            android:layout_marginTop="15dp"
                             android:text="Marks"
+                            android:textSize="16sp"
+                            android:layout_centerHorizontal="true"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
+                    </RelativeLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleDuration="350"
+                    app:mrl_rippleFadeDuration="75"
+                    app:mrl_rippleDelayClick="true" >
+                    <RelativeLayout
+                        android:id="@+id/rl_academics"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconAcademic"
+                            android:text="@string/fa_academics"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtIconAcademic"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Homework"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            />
+                    </RelativeLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleDuration="350"
+                    app:mrl_rippleFadeDuration="75"
+                    app:mrl_rippleDelayClick="true" >
+                    <RelativeLayout
+                        android:id="@+id/rl_behaviour"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconBehaviour"
+                            android:text="@string/fa_stars"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtIconBehaviour"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Stars"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            />
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
@@ -291,8 +417,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/academics">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -300,121 +426,36 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/rl_academics">
-
-                        <ImageView
-                            android:id="@+id/img_academic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_date_range_white_24dp" />
+                        android:id="@+id/rl_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tv_academic"
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconPayment"
+                            android:text="@string/fa_payments"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_academic"
+                            android:layout_below="@+id/txtIconPayment"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
-                            android:text="Academic"
-                            android:textAlignment="center"
-                            android:textColor="#ffffff" />
-                    </RelativeLayout>
-                </com.balysv.materialripple.MaterialRippleLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/back">
-
-                <com.balysv.materialripple.MaterialRippleLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:mrl_rippleDuration="350"
-                    app:mrl_rippleFadeDuration="75"
-                    app:mrl_rippleDelayClick="true" >
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/rl_behaviour">
-
-                        <ImageView
-                            android:id="@+id/img_behavior"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Payment"
                             android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_format_bold_white_24dp" />
-
-                        <TextView
-                            android:id="@+id/tv_bahavior"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_below="@+id/img_behavior"
-                            android:text="Behavior"
+                            android:textSize="16sp"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
-                    </RelativeLayout>
-                </com.balysv.materialripple.MaterialRippleLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/payment">
-
-                <com.balysv.materialripple.MaterialRippleLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:mrl_rippleDuration="350"
-                    app:mrl_rippleFadeDuration="75"
-                    app:mrl_rippleDelayClick="true" >
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/rl_payment">
-
-                        <ImageView
-                            android:id="@+id/img_payment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_attach_money_white_24dp" />
-
-                        <TextView
-                            android:id="@+id/tv_payments"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_payment"
-                            android:layout_marginBottom="1dp"
-                            android:layout_marginLeft="1dp"
-                            android:layout_marginRight="1dp"
-                            android:text="Payments"
-                            android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>
@@ -422,8 +463,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark">
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
@@ -431,31 +472,36 @@
                     app:mrl_rippleDuration="350"
                     app:mrl_rippleFadeDuration="75"
                     app:mrl_rippleDelayClick="true" >
-
                     <RelativeLayout
                         android:id="@+id/rl_notice"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/img_notice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_date_range_white_24dp" />
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tv_notice"
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/txtIconNotice"
+                            android:text="@string/fa_notice"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:background="@drawable/circle_accent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_notice"
+                            android:layout_below="@+id/txtIconNotice"
                             android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
                             android:layout_marginRight="1dp"
-                            android:text="Notice Board"
+                            android:layout_marginTop="15dp"
+                            android:text="Notice"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16sp"
                             android:textAlignment="center"
-                            android:textColor="#ffffff" />
+                            />
                     </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </LinearLayout>

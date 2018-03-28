@@ -1,6 +1,8 @@
 package drogenidesoftwares.drogenideschool.noticeboard;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +11,12 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.Attributes;
 
 import drogenidesoftwares.drogenideschool.R;
 
@@ -47,18 +50,20 @@ public class NoticeBoardAdapter extends RecyclerView.Adapter<NoticeBoardAdapter.
     public void onBindViewHolder(NoticeBoardHolder holder, final int position) {
         NoticeBoardHolder myHolder=holder;
         myHolder.noticeDateTv.setText(itemList.get(position).getNoticeDate());
+        myHolder.title.setText(itemList.get(position).getNoticeTitle());
         myHolder.noticeDescriptionTv.setText(itemList.get(position).getNoticeDescription());
        // myHolder.Photo.setImageResource(R.mipmap.ic_keyboard_arrow_right_black_36dp);
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Toast.makeText(v.getContext(),"position is"+ itemList.get(position),Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(context, BusinessCategoryActivity.class);
-//                intent.putExtra("ID",itemList.get(position).getID());
-                //intent.putExtra("image", Attributes.Name.get(position)); // put image data in Intent
-//                context.startActivity(intent); // start Intent
-
-
+                Toast.makeText(v.getContext(),"position is"+ itemList.get(position),Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, DetailNoticeActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putString("Date",itemList.get(position).getNoticeDate());
+                bundle.putString("Description", itemList.get(position).getNoticeDescription()); // put image data in Intent
+                bundle.putString("NoticeTitle",itemList.get(position).getNoticeTitle());
+                intent.putExtras(bundle);
+                context.startActivity(intent); // start Intent
             }
         });
     }
@@ -74,30 +79,18 @@ public class NoticeBoardAdapter extends RecyclerView.Adapter<NoticeBoardAdapter.
         {
             filter=new NoticeBoardFilter((ArrayList<NoticeBoardModel>) filterList,this);
         }
-
         return filter;
     }
-
     public class NoticeBoardHolder extends RecyclerView.ViewHolder{
 
-        public TextView noticeDateTv;
+        public TextView noticeDateTv,title;
         public TextView noticeDescriptionTv;
 
         public NoticeBoardHolder(View itemView) {
             super(itemView);
             noticeDateTv = itemView.findViewById(R.id.notice_date);
             noticeDescriptionTv =itemView.findViewById(R.id.notice_description);
+            title=itemView.findViewById(R.id.tv);
         }
-
-
-
     }
-
-
-
-
-
-
-
-
 }

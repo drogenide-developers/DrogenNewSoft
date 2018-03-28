@@ -5,15 +5,7 @@ package drogenidesoftwares.drogenideschool.studymaterial;
  */
 
 public class StudyMaterialModel {
-    private String StudyMaterialType;
 
-    public String getStudyMaterialType() {
-        return StudyMaterialType;
-    }
-
-    public void setStudyMaterialType(String studyMaterialType) {
-        StudyMaterialType = studyMaterialType;
-    }
 
     public String getStudyMaterialDate() {
         return StudyMaterialDate;

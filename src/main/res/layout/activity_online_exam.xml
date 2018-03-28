@@ -9,6 +9,13 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/online_exam_recycler"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent"
         android:layout_margin="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Exams Coming up..!"/>
 </LinearLayout>

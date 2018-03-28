@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import drogenidesoftwares.drogenideschool.R;
@@ -20,16 +21,14 @@ import drogenidesoftwares.drogenideschool.teachers.TeachersModel;
 
 public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.HomeWorkHolder> {
 
-    List<HomeworkModel> itemList,filterList;
+    ArrayList<HomeworkModel> itemList,filterList;
     private Context context;
     TeachersFilter filter;
 
-    public HomeworkAdapter(Context context, List<HomeworkModel> itemList) {
+    public HomeworkAdapter(Context context, ArrayList<HomeworkModel> itemList) {
         this.context = context;
         this.itemList = itemList;
         this.filterList=itemList;
-
-
     }
 
     @Override
@@ -39,7 +38,6 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.HomeWo
         HomeWorkHolder holder = new HomeWorkHolder(layoutView);
         return holder;
     }
-
     @Override
     public void onBindViewHolder(HomeWorkHolder holder, final int position) {
         HomeWorkHolder myHolder=holder;
@@ -47,27 +45,11 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.HomeWo
         myHolder.homeWorkDescription.setText(itemList.get(position).getHomeWorkDescription());
         myHolder.homeWorkDate.setText(itemList.get(position).getHomeWorkDate());
         myHolder.homeWorkSubject.setText(itemList.get(position).getHomeworkSubject());
-       // myHolder.Photo.setImageResource(R.mipmap.ic_keyboard_arrow_right_black_36dp);
-        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Toast.makeText(v.getContext(),"position is"+ itemList.get(position),Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(context, BusinessCategoryActivity.class);
-//                intent.putExtra("ID",itemList.get(position).getID());
-                //intent.putExtra("image", Attributes.Name.get(position)); // put image data in Intent
-//                context.startActivity(intent); // start Intent
-
-
-            }
-        });
     }
-
     @Override
     public int getItemCount() {
         return this.itemList.size();
     }
-
-
 
     public class HomeWorkHolder extends RecyclerView.ViewHolder{
 
@@ -81,16 +63,5 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.HomeWo
             homeWorkSubject =itemView.findViewById(R.id.subject_homework);
             homeWorkDate=itemView.findViewById(R.id.tf_delivery_date);
         }
-
-
-
     }
-
-
-
-
-
-
-
-
 }

@@ -27,4 +27,19 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
+
+    <!--Font awesome Icons-->
+    <string name="fa_message">&#xf086;</string>
+    <string name="fa_teacher">&#xf007;</string>
+    <string name="fa_schedule">&#xf073;</string>
+    <string name="fa_attendance">&#xf058;</string>
+    <string name="fa_liberary">&#xf1ea;</string>
+    <string name="fa_marks">&#xf15c;</string>
+    <string name="fa_academics">&#xf044;</string>
+    <string name="fa_stars">&#xf005;</string>
+    <string name="fa_payments">&#xf09d;</string>
+    <string name="fa_notice">&#xf0f8;
+
+
+    </string>
 </resources>

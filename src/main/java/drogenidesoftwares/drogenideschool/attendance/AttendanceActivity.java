@@ -84,18 +84,13 @@ public class AttendanceActivity extends AppCompatActivity implements AdapterView
             public View getDropDownView(int position, View convertView,ViewGroup parent)
             {
                 View spinnerview = super.getDropDownView(position, convertView, parent);
-
                 TextView spinnertextview = (TextView) spinnerview;
-
                 if(position == 0) {
-
                     //Set the disable spinner item color fade .
                     spinnertextview.setTextColor(Color.parseColor("#bcbcbb"));
                 }
                 else {
-
                     spinnertextview.setTextColor(Color.parseColor("#39A0D8"));
-
                 }
                 return spinnerview;
             }

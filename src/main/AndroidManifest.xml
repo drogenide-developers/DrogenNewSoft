@@ -78,6 +78,7 @@
             android:label="Syllabus"
             android:parentActivityName=".academic.AcademicsActivity"/>
         <activity android:name=".behavior.BehaviorActivity"></activity>
+        <activity android:name=".noticeboard.DetailNoticeActivity"/>
     </application>
 
 </manifest>

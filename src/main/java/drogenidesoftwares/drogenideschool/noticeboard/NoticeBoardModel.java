@@ -7,9 +7,18 @@ package drogenidesoftwares.drogenideschool.noticeboard;
 public class NoticeBoardModel {
 
 
-    private String noticeDate;
-    private String noticeDescription;
-    private String ID;
+    public String noticeDate;
+    public String noticeDescription;
+    public String ID;
+    public String noticeTitle;
+
+    public String getNoticeTitle() {
+        return noticeTitle;
+    }
+
+    public void setNoticeTitle(String noticeTitle) {
+        this.noticeTitle = noticeTitle;
+    }
 
     public String getNoticeDescription() {
         return noticeDescription;

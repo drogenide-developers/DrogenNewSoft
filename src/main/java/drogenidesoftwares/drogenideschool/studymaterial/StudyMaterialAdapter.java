@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,6 @@ public class StudyMaterialAdapter extends RecyclerView.Adapter<StudyMaterialAdap
     @Override
     public void onBindViewHolder(StudyMaterialHolder holder, final int position) {
         StudyMaterialHolder myHolder=holder;
-        myHolder.studyMaterialType.setText(itemList.get(position).getStudyMaterialType());
         myHolder.studyMaterialTitle.setText(itemList.get(position).getStudyMaterialTitle());
         myHolder.studyMaterialDate.setText(itemList.get(position).getStudyMaterialDate());
         myHolder.studyMaterialDescription.setText(itemList.get(position).getStudyMaterialDscription());
@@ -61,6 +61,13 @@ public class StudyMaterialAdapter extends RecyclerView.Adapter<StudyMaterialAdap
 
             }
         });
+        myHolder.download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Book not available yet..!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -72,16 +79,17 @@ public class StudyMaterialAdapter extends RecyclerView.Adapter<StudyMaterialAdap
 
     public class StudyMaterialHolder extends RecyclerView.ViewHolder{
 
-        public TextView studyMaterialType, studyMaterialTitle, studyMaterialSubject,studyMaterialDescription,studyMaterialDate;
+        public TextView studyMaterialTitle, studyMaterialSubject,studyMaterialDescription,studyMaterialDate,download;
         public ImageView Photo;
 
         public StudyMaterialHolder(View itemView) {
             super(itemView);
-            studyMaterialType = itemView.findViewById(R.id.study_material_type);
+
             studyMaterialTitle = itemView.findViewById(R.id.study_material_title);
             studyMaterialSubject =itemView.findViewById(R.id.study_material_subject);
             studyMaterialDescription=itemView.findViewById(R.id.study_material_description);
             studyMaterialDate=itemView.findViewById(R.id.study_material_date);
+            download=itemView.findViewById(R.id.study_material_download);
         }
 
 

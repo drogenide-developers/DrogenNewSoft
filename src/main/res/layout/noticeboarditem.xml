@@ -1,58 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    card_view:cardBackgroundColor="@color/colorPrimary"
     card_view:cardCornerRadius="10dp"
+    android:background="@drawable/rounded_layout_blue"
     card_view:cardElevation="5dp"
-    card_view:cardUseCompatPadding="true">
+    android:layout_marginTop="5dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notice"
-            android:id="@+id/tv"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"/>
-        <ImageView
-            android:id="@+id/main_photo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_date_range_white_24dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/tv"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notice Date"
-            android:id="@+id/notice_date"
-            android:layout_below="@+id/main_photo"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="textStart"
-            android:gravity="start"
-            android:layout_marginLeft="10dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Notice"
+                android:textSize="14sp"
+                android:id="@+id/tv" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:text="Notice Date"
+                android:id="@+id/notice_date"
+                android:textSize="14sp"
+                android:gravity="right"
+                android:layout_marginRight="5dp"/>
+
+        </LinearLayout>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/notice_date"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
             android:id="@+id/notice_description"
-            android:text="It's time for high stakes in the Nidahas Trophy 2018 as hosts Sri Lanka and Bangladesh get ready to lock horns in a virtual semifinal on Friday (March 16) at the R. Premadasa Stadium in Colombo. Having lost to India the previous evening, Bangladesh received a sweet tonic when news of Shakib Al Hasan joining the squad broke through. The star all-rounder had been nursing a finger injury but following a smooth net session in Dhaka earlier, the decision to include the 30-year-old was made. Shakib's inclusion, if he passes the assessment, will not only add meat to Bangladesh's middle-order, which at present is heavily reliant on Mushfiqur Rahim, but also boost their spin potency with Nazmul Islam and Mehidy Hasan not proving to be as penetrative."
-            android:layout_margin="5dp"
+            android:text="It's time for high stakes in the Nidahas ..."
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
-            android:textAlignment="center"/>
-    </RelativeLayout>
-
+            />
+    </LinearLayout
+        >
 </android.support.v7.widget.CardView>
