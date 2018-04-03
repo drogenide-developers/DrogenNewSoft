@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="drogenidesoftwares.drogenideschool">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logowhite"
@@ -10,22 +18,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".message.MessagesActivity"
             android:label="Messages"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".DrawerActivity"/>
         <activity
             android:name=".updateinfo.UpdateInfo"
             android:label="Update Information"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".DrawerActivity" />
         <activity
             android:name=".noticeboard.NoticeBoard"
             android:label=" Notice Board"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".DrawerActivity" />
         <activity
             android:name=".loginandregistration.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -42,43 +45,75 @@
         <activity
             android:name=".teachers.TeachersActivity"
             android:label="Teachers"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".DrawerActivity" />
         <activity
             android:name=".message.ChatActivity"
             android:label="Conversation"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".DrawerActivity" />
         <activity
             android:name=".schedule.ScheduleActivity"
             android:label="Schedule"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".DrawerActivity" />
         <activity
             android:name=".attendance.AttendanceActivity"
             android:label="Attendance Report"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".library.LibraryActivity"
+            android:parentActivityName=".DrawerActivity" />
+        <activity
+            android:name=".library.LibraryActivity"
             android:label="Library"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".marks.MarksActivity"
+            android:parentActivityName=".DrawerActivity" />
+        <activity
+            android:name=".marks.MarksActivity"
             android:label="Marks"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".academic.AcademicsActivity"
+            android:parentActivityName=".DrawerActivity" />
+        <activity
+            android:name=".academic.AcademicsActivity"
             android:label="Academics"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".homework.HomeWorkActivity"
+            android:parentActivityName=".DrawerActivity" />
+        <activity
+            android:name=".homework.HomeWorkActivity"
             android:label="Homework"
-            android:parentActivityName=".academic.AcademicsActivity"/>
-        <activity android:name=".onlineexam.OnlineExamActivity"
+            android:parentActivityName=".academic.AcademicsActivity" />
+        <activity
+            android:name=".onlineexam.OnlineExamActivity"
             android:label="Online Exam"
-            android:parentActivityName=".academic.AcademicsActivity"/>
-        <activity android:name=".studymaterial.StudyMaterialActivity"
+            android:parentActivityName=".academic.AcademicsActivity" />
+        <activity
+            android:name=".studymaterial.StudyMaterialActivity"
             android:label="Study Material"
-            android:parentActivityName=".academic.AcademicsActivity"/>
-        <activity android:name=".syllabus.SyllabusActivity"
+            android:parentActivityName=".academic.AcademicsActivity" />
+        <activity
+            android:name=".syllabus.SyllabusActivity"
             android:label="Syllabus"
-            android:parentActivityName=".academic.AcademicsActivity"/>
-        <activity android:name=".behavior.BehaviorActivity"></activity>
-        <activity android:name=".noticeboard.DetailNoticeActivity"/>
+            android:parentActivityName=".academic.AcademicsActivity" />
+        <activity android:name=".behavior.BehaviorActivity" />
+        <activity android:name=".noticeboard.DetailNoticeActivity" />
+        <activity android:name=".homework.HomeworkDetailsActivity" />
+        <activity android:name=".message.ChatThreadListActivity" />
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".marks.MarksDetailActivity" />
+        <activity android:name=".schedule.ExamDetailActivity" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".tracking.TrackingActivity"
+            android:label="@string/title_activity_tracking"></activity>
+        <activity android:name=".schedule.ClassDetailActivity"/>
+        <activity android:name=".behavior.BehaviorDetailActivity"/>
     </application>
 
 </manifest>
