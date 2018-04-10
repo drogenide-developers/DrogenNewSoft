@@ -6,13 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,10 +17,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import drogenidesoftwares.drogenideschool.DrawerActivity;
 import drogenidesoftwares.drogenideschool.ItemOffSetDecoration;
-import drogenidesoftwares.drogenideschool.MainActivity;
 import drogenidesoftwares.drogenideschool.R;
-import drogenidesoftwares.drogenideschool.teachers.TeachersAdapter;
 
 public class AttendanceActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -105,7 +101,7 @@ public class AttendanceActivity extends AppCompatActivity implements AdapterView
         tvShowAttendance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AttendanceActivity.this, MainActivity.class);
+                Intent intent = new Intent(AttendanceActivity.this, DrawerActivity.class);
                 intent.putExtra("data", String.valueOf(spinner.getSelectedItem()));
                 startActivity(intent);
             }

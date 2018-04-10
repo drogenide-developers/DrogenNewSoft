@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="drogenidesoftwares.drogenideschool.schedule.ExamDetailActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Division A"
+    android:textSize="16sp"
+    android:layout_marginTop="10dp"
+    android:padding="5dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exam Title"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:text="Sr. No"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp" />
+            <TextView
+                android:text="Subject"
+                android:padding="5dp" />
+            <TextView
+                android:text="Time"
+                android:padding="5dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="Date" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="1"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp" />
+            <TextView
+                android:text="Mathematics"
+                android:padding="5dp" />
+            <TextView
+                android:text="10 Am-1 PM"
+                android:padding="5dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="13/03/2018" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="2"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp" />
+            <TextView
+                android:text="Marathi"
+                android:padding="5dp" />
+            <TextView
+                android:text="10 Am-1 PM"
+                android:padding="5dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="14/04/2018" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="3"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp" />
+            <TextView
+                android:text="English"
+                android:padding="5dp" />
+            <TextView
+                android:text="10 Am-1 PM"
+                android:padding="5dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="16/04/2018" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="4"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp" />
+            <TextView
+                android:text="Hindi"
+                android:padding="5dp" />
+            <TextView
+                android:text="10 Am-1 PM"
+                android:padding="5dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="17/04/2018" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="5"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp" />
+            <TextView
+                android:text="History"
+                android:padding="5dp" />
+            <TextView
+                android:text="10 Am-1 PM"
+                android:padding="5dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="18/04/2018" />
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>

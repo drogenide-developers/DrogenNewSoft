@@ -22,6 +22,7 @@ public class AcademicsActivity extends AppCompatActivity {
         rlSyllabus=findViewById(R.id.rl_syllabus);
         rlStudyMaterial=findViewById(R.id.rl_studymaterial);
         rlOnlineExam=findViewById(R.id.rl_online_exam);
+        getSupportActionBar().setTitle("Academics");
 
         rlHomework.setOnClickListener(new View.OnClickListener() {
             @Override

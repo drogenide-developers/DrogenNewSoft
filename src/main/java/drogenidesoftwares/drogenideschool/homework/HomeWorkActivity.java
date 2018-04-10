@@ -28,6 +28,7 @@ public class HomeWorkActivity extends AppCompatActivity {
         rView = (RecyclerView) findViewById(R.id.recycler_home_work);
        /* rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));*/
+       getSupportActionBar().setTitle("Homework");
        HomeworkModel hm=new HomeworkModel();
        hm.setHomeWorkDate("1/1/2018");
        hm.setHomeWorkDescription("Maths homework for today");

@@ -7,83 +7,34 @@ package drogenidesoftwares.drogenideschool.marks;
 public class MarksModel {
 
 
-    private String bookName;
-    private String bookType;
-    private String author;
-    private String status;
-    private String description;
-    private String price;
-    private String ID;
+    private String exam;
 
-    public String getAuthor() {
-        return author;
+    public String getExam() {
+        return exam;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setExam(String exam) {
+        this.exam = exam;
     }
 
-    public String getStatus() {
-        return status;
+    public String getDateOfExam() {
+        return dateOfExam;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDateOfExam(String dateOfExam) {
+        this.dateOfExam = dateOfExam;
     }
 
-    public String getDescription() {
-        return description;
+    public String getRemarks() {
+        return remarks;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-
-
-    public String getBookType() {
-        return bookType;
-    }
-
-    public void setBookType(String bookType) {
-        this.bookType = bookType;
-    }
-
-   public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-
-
-
-    public String getBookName() {
-        return bookName;
-    }
-
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-
-/*    public String getBusinessIcon() {
-        return businessIcon;
-    }
-
-    public void setBusinessIcon(String businessIcon) {
-        this.businessIcon = businessIcon;
-    }
-    */
+    private String dateOfExam;
+    private String remarks;
 
 
 

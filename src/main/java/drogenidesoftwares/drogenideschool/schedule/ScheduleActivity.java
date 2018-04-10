@@ -32,7 +32,9 @@ public class ScheduleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_schedule);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -73,7 +75,7 @@ public class ScheduleActivity extends AppCompatActivity {
                     classSchedule cSchedule=new classSchedule();
                     return cSchedule;
                 case 1:
-                    examSchedule eSchedule=new examSchedule();
+                    ExamSchedule eSchedule=new ExamSchedule();
                     return eSchedule;
                 default:
                     return null;

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+          <de.hdodenhof.circleimageview.CircleImageView
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/profile_image_thread"
+              android:layout_width="0dp"
+              android:layout_height="80dp"
+              android:padding="5dp"
+              app:civ_border_width="3dp"
+              android:layout_weight="0.3"
+              android:src="@drawable/logowhite"
+              app:civ_border_color="@color/colorPrimary"/>
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="80dp"
+              android:layout_marginLeft="10dp"
+              android:gravity="center"
+              android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Thread Title"
+                      android:id="@+id/txt_thread_title"
+                      android:layout_marginLeft="5dp"
+                      android:textSize="18sp"
+                      />
+              <LinearLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginTop="5dp"
+                  android:gravity="center_horizontal"
+                  android:weightSum="1.5">
+                  <TextView
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:text="Last Sender :"
+                      android:layout_weight="1"
+                      android:id="@+id/txt_thread_last_sendername"
+                      android:layout_marginLeft="5dp" />
+
+                  <TextView
+                      android:layout_width="0dp"
+                      android:layout_weight="0.5"
+                      android:layout_height="wrap_content"
+                      android:gravity="right"
+                      android:layout_marginRight="5dp"
+                      android:id="@+id/txt_last_msg_time"
+                      android:text="time" />
+              </LinearLayout>
+          </LinearLayout>
+      </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#444"/>
+</RelativeLayout>

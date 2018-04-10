@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -7,22 +7,26 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            app:cardElevation="3dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/logowhite"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"/>
-            </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="27dp"
+                        android:src="@drawable/logowhite" />
+                </RelativeLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,29 +58,30 @@
                     android:layout_height="wrap_content"
                     android:text="Status:"
                     android:id="@+id/book_status"
+                    android:layout_marginLeft="5dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="5dp"/>
-            </LinearLayout>
-                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/book_description"
+                    android:text="Description" />
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="15dp">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/book_download"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="20dp"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/login_btn"
+                    android:text="Download" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:textColor="#ffffff"
-                        android:textSize="14sp"
-                        android:id="@+id/book_description"
-                        android:background="@drawable/login_btn"
-                        android:layout_marginRight="15dp"
-                        android:text="Description" />
-                </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
 
-</LinearLayout>
+</RelativeLayout>

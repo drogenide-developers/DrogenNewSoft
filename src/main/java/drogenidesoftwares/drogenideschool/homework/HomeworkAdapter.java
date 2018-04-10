@@ -1,6 +1,7 @@
 package drogenidesoftwares.drogenideschool.homework;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,14 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.HomeWo
         myHolder.homeWorkDescription.setText(itemList.get(position).getHomeWorkDescription());
         myHolder.homeWorkDate.setText(itemList.get(position).getHomeWorkDate());
         myHolder.homeWorkSubject.setText(itemList.get(position).getHomeworkSubject());
+
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(context,HomeworkDetailsActivity.class);
+                context.startActivity(i);
+            }
+        });
     }
     @Override
     public int getItemCount() {

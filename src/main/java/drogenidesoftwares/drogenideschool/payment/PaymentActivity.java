@@ -1,27 +1,29 @@
 package drogenidesoftwares.drogenideschool.payment;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
-import drogenidesoftwares.drogenideschool.ItemOffSetDecoration;
 import drogenidesoftwares.drogenideschool.R;
-import drogenidesoftwares.drogenideschool.homework.HomeworkAdapter;
 
 public class PaymentActivity extends AppCompatActivity {
-
-    RecyclerView rView;
-    PaymentAdapter rcAdapter;
-    LinearLayoutManager linearLayoutManager;
+    Button btnPay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-        rView = (RecyclerView) findViewById(R.id.payment_recycler);
-        rView.setHasFixedSize(true);
-        rView.addItemDecoration(new ItemOffSetDecoration(1));
-        rView.setLayoutManager(linearLayoutManager);
-        rView.setAdapter(rcAdapter);
+        btnPay=findViewById(R.id.btn_pay_now);
+        getSupportActionBar().setTitle("Payment");
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),payInvoiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

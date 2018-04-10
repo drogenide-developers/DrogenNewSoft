@@ -11,7 +11,7 @@ public class FontManager {
 
         public static final String ROOT = "fonts/",
                 BRAND = ROOT + "fa_brands_400.ttf",
-                REGULAR=ROOT+"fa_regular_400.ttf",
+                REGULAR=ROOT+"fontawesome_webfont.ttf",
                 SOLID=ROOT+"fa_solid_900.ttf";
 
         public static Typeface getTypeface(Context context, String font) {

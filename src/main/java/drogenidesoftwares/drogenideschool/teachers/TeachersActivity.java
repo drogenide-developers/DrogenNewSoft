@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import drogenidesoftwares.drogenideschool.ItemOffSetDecoration;
 import drogenidesoftwares.drogenideschool.R;
 
@@ -21,15 +23,25 @@ public class TeachersActivity extends AppCompatActivity {
     private SearchView mSearchView;
     private MenuItem searchMenuItem;
     LinearLayoutManager linearLayoutManager;
+    ArrayList teachersList=new ArrayList();
+    TeachersModel teachersModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teachers);
         rView = (RecyclerView) findViewById(R.id.teachers_rv);
+        rcAdapter=new TeachersAdapter(getApplicationContext(),teachersList);
+        getSupportActionBar().setTitle("Messages");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        teachersModel=new TeachersModel();
+        teachersModel.setTeacherName("Teachers Name : "+"Drogen");
+        teachersModel.setSubjectName("Subject : "+"Mathematics");
+        teachersList.add(teachersModel);
+
         rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));
-        rView.setLayoutManager(linearLayoutManager);
+        rView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rView.setAdapter(rcAdapter);
 
     }
@@ -66,6 +78,5 @@ public class TeachersActivity extends AppCompatActivity {
             }
         }
         return true;
-
     }
 }

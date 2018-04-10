@@ -19,6 +19,7 @@ public class SyllabusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
 
+        getSupportActionBar().setTitle("Syllabus");
         rView = (RecyclerView) findViewById(R.id.syllabus_recycler);
         rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));

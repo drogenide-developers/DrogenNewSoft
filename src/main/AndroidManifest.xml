@@ -53,7 +53,9 @@
         <activity
             android:name=".schedule.ScheduleActivity"
             android:label="Schedule"
-            android:parentActivityName=".DrawerActivity" />
+            android:parentActivityName=".DrawerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity
             android:name=".attendance.AttendanceActivity"
             android:label="Attendance Report"
@@ -109,8 +111,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".tracking.TrackingActivity"
+        <activity android:name=".tracking.TrackingActivity"
             android:label="@string/title_activity_tracking"></activity>
         <activity android:name=".schedule.ClassDetailActivity"/>
         <activity android:name=".behavior.BehaviorDetailActivity"/>

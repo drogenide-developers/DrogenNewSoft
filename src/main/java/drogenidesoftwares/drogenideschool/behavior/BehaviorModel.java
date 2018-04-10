@@ -6,69 +6,32 @@ package drogenidesoftwares.drogenideschool.behavior;
 
 public class BehaviorModel {
 
-    public String getBehaviorDate() {
-        return behaviorDate;
+    public String getBehaviorSubject() {
+        return behaviorSubject;
     }
 
-    public void setBehaviorDate(String behaviorDate) {
-        this.behaviorDate = behaviorDate;
+    public void setBehaviorSubject(String behaviorSubject) {
+        this.behaviorSubject = behaviorSubject;
     }
 
-    public String getBehaviorClass() {
-        return behaviorClass;
+    public String getSubjectRating() {
+        return subjectRating;
     }
 
-    public void setBehaviorClass(String behaviorClass) {
-        this.behaviorClass = behaviorClass;
+    public void setSubjectRating(String subjectRating) {
+        this.subjectRating = subjectRating;
     }
 
-    public String getBehaviorSection() {
-        return behaviorSection;
+    public String getSubjectRemark() {
+        return subjectRemark;
     }
 
-    public void setBehaviorSection(String behaviorSection) {
-        this.behaviorSection = behaviorSection;
+    public void setSubjectRemark(String subjectRemark) {
+        this.subjectRemark = subjectRemark;
     }
 
-    public String getBehaviorReason() {
-        return behaviorReason;
-    }
+    String behaviorSubject;
+    String subjectRating;
+    String subjectRemark;
 
-    public void setBehaviorReason(String behaviorReason) {
-        this.behaviorReason = behaviorReason;
-    }
-
-    public String getBehaviorStudentName() {
-        return behaviorStudentName;
-    }
-
-    public void setBehaviorStudentName(String behaviorStudentName) {
-        this.behaviorStudentName = behaviorStudentName;
-    }
-
-    public String getBehaviorPriority() {
-        return behaviorPriority;
-    }
-
-    public void setBehaviorPriority(String behaviorPriority) {
-        this.behaviorPriority = behaviorPriority;
-    }
-
-    public String getBehaviorOption() {
-        return behaviorOption;
-    }
-
-    public void setBehaviorOption(String behaviorOption) {
-        this.behaviorOption = behaviorOption;
-    }
-
-    public String getBehaviorCreatedBy() {
-        return behaviorCreatedBy;
-    }
-
-    public void setBehaviorCreatedBy(String behaviorCreatedBy) {
-        this.behaviorCreatedBy = behaviorCreatedBy;
-    }
-
-    private String behaviorDate,behaviorClass,behaviorSection,behaviorReason,behaviorStudentName,behaviorPriority,behaviorOption,behaviorCreatedBy;
 }

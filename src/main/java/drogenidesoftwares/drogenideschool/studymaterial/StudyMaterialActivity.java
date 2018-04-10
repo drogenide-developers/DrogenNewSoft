@@ -26,6 +26,7 @@ public class StudyMaterialActivity extends AppCompatActivity {
         rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));
 
+        getSupportActionBar().setTitle("Study Material");
         StudyMaterialModel studymodel=new StudyMaterialModel();
         studymodel.setStudyMaterialDate("1/4/2018");
         studymodel.setStudyMaterialDscription("Complete maths problems with solution.");

@@ -1,14 +1,18 @@
 package drogenidesoftwares.drogenideschool.behavior;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
+import java.util.jar.Attributes;
 
 import drogenidesoftwares.drogenideschool.R;
 import drogenidesoftwares.drogenideschool.onlineexam.OnlineExamModel;
@@ -43,24 +47,18 @@ public class BehaviorAdapter extends RecyclerView.Adapter<BehaviorAdapter.Behavi
     @Override
     public void onBindViewHolder(BehaviorHolder holder, final int position) {
         BehaviorHolder myHolder=holder;
-        myHolder.behaviorStudentName.setText(itemList.get(position).getBehaviorStudentName());
-        myHolder.behaviorClass.setText(itemList.get(position).getBehaviorClass());
-        myHolder.behaviorSection.setText(itemList.get(position).getBehaviorSection());
-        myHolder.behaviorCreatedBy.setText(itemList.get(position).getBehaviorCreatedBy());
-        myHolder.behaviorDate.setText(itemList.get(position).getBehaviorDate());
-        myHolder.behaviorReason.setText(itemList.get(position).getBehaviorReason());
-        myHolder.behaviorOption.setText(itemList.get(position).getBehaviorOption());
-        myHolder.behaviorPriority.setText(itemList.get(position).getBehaviorPriority());
+        myHolder.tvSubject.setText(itemList.get(position).getBehaviorSubject());
+        myHolder.ratingbar.setRating(Float.parseFloat(itemList.get(position).getSubjectRating()));
 
        // myHolder.Photo.setImageResource(R.mipmap.ic_keyboard_arrow_right_black_36dp);
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Toast.makeText(v.getContext(),"position is"+ itemList.get(position),Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(context, BusinessCategoryActivity.class);
-//                intent.putExtra("ID",itemList.get(position).getID());
-                //intent.putExtra("image", Attributes.Name.get(position)); // put image data in Intent
-//                context.startActivity(intent); // start Intent
+              Intent intent = new Intent(context, BehaviorDetailActivity.class);
+               intent.putExtra("Remark",itemList.get(position).getSubjectRemark());
+               intent.putExtra("Rating",itemList.get(position).getSubjectRating());
+               intent.putExtra("Subject",itemList.get(position).getBehaviorSubject());
+              context.startActivity(intent); // start Intent
 
 
             }
@@ -76,30 +74,14 @@ public class BehaviorAdapter extends RecyclerView.Adapter<BehaviorAdapter.Behavi
 
     public class BehaviorHolder extends RecyclerView.ViewHolder{
 
-        public TextView behaviorDate,behaviorClass,behaviorSection,behaviorReason,behaviorStudentName,behaviorPriority,behaviorOption,behaviorCreatedBy;
-        public ImageView Photo;
+        public TextView tvSubject;
+        RatingBar ratingbar;
+
 
         public BehaviorHolder(View itemView) {
             super(itemView);
-            behaviorStudentName = itemView.findViewById(R.id.student_name_bahavior);
-            behaviorClass = itemView.findViewById(R.id.behaviour_student_class);
-            behaviorSection =itemView.findViewById(R.id.behavior_section);
-            behaviorReason=itemView.findViewById(R.id.behavior_reason);
-            behaviorPriority=itemView.findViewById(R.id.behavior_priority);
-            behaviorDate=itemView.findViewById(R.id.behavior_date);
-            behaviorOption=itemView.findViewById(R.id.behavior_option);
-            behaviorCreatedBy=itemView.findViewById(R.id.created_by);
+            tvSubject = itemView.findViewById(R.id.behavior_subject);
+            ratingbar=itemView.findViewById(R.id.behavior_rating_bar_adapter);
         }
-
-
-
     }
-
-
-
-
-
-
-
-
 }

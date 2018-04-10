@@ -8,6 +8,7 @@
     card_view:cardCornerRadius="10dp"
     android:background="@drawable/rounded_layout_blue"
     card_view:cardElevation="5dp"
+    android:layout_margin="5dp"
     android:layout_marginTop="5dp">
 
     <LinearLayout

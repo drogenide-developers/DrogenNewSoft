@@ -21,6 +21,7 @@ public class OnlineExamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_online_exam);
 
+        getSupportActionBar().setTitle("Online Exam");
         rView = (RecyclerView) findViewById(R.id.online_exam_recycler);
         rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));

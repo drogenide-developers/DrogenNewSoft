@@ -34,6 +34,8 @@ public class NoticeBoard extends AppCompatActivity {
         /*rView.setHasFixedSize(true);
         rView.addItemDecoration(new ItemOffSetDecoration(1));
 */
+
+        getSupportActionBar().setTitle("Notice");
         NoticeBoardModel boardModel=new NoticeBoardModel();
         boardModel.setID("1");
         boardModel.setNoticeTitle("Exam Notice");
@@ -89,4 +91,5 @@ public class NoticeBoard extends AppCompatActivity {
         }
         return true;
     }
+
 }

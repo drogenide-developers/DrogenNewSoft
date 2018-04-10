@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <LinearLayout
+            android:layout_margin="5dp"
+            app:cardElevation="3dp"
+            android:id="@+id/cardView">
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sr No"
+                    android:text="1."
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:id="@+id/sr_number" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Teacher Name :"
-                    android:id="@+id/tv_teacher_name"
-                    android:layout_marginLeft="5dp"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Vikram Daud"
+                    android:layout_toEndOf="@+id/sr_number"
                     android:id="@+id/teacher_name"
-                    android:layout_marginLeft="5dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/sr_number" />
+
                 <TextView
+                    android:id="@+id/send_msg_t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Subject Name :"
-                    android:layout_marginLeft="5dp"
-                    android:id="@+id/tv_subject_name"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Physics"
-                    android:id="@+id/subject_name"
-                    android:layout_marginLeft="5dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/bordered_blue"
+                    android:gravity="end"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:text="Send Message"
-                    android:textColor="#ffffff"
-                    android:layout_marginRight="5dp"
-                    android:id="@+id/send_msg_t"
-                    android:background="@drawable/login_btn"
-                    android:layout_marginLeft="5dp"/>
-            </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </RelativeLayout>
+                    android:textColor="@color/colorPrimary" />
 
-</LinearLayout>
+                <TextView
+                    android:id="@+id/subject_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/teacher_name"
+                    android:layout_alignStart="@+id/teacher_name"
+                    android:layout_below="@+id/send_msg_t"
+                    android:text="Physics"
+                    android:layout_marginBottom="5dp"/>
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

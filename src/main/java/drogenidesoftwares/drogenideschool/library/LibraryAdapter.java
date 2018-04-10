@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -18,10 +19,10 @@ import drogenidesoftwares.drogenideschool.R;
 
 public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.BookHolder>{
 
-    List<MarksModel> itemList,filterList;
+    List<LibraryModel> itemList,filterList;
     private Context context;
 
-    public LibraryAdapter(Context context, List<MarksModel> itemList) {
+    public LibraryAdapter(Context context, List<LibraryModel> itemList) {
         this.context = context;
         this.itemList = itemList;
         this.filterList=itemList;
@@ -44,10 +45,12 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.BookHold
         myHolder.bookType.setText(itemList.get(position).getBookType());
         myHolder.bookStatus.setText(itemList.get(position).getStatus());
         myHolder.bookAuthor.setText(itemList.get(position).getAuthor());
-        myHolder.bookDescription.setOnClickListener(new View.OnClickListener() {
+        myHolder.bookDescription.setText(itemList.get(position).getDescription());
+        myHolder.bookDownload.setText("Download");
+        myHolder.bookDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(context,"No file to Download",Toast.LENGTH_LONG).show();
             }
         });
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +74,7 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.BookHold
 
     public class BookHolder extends RecyclerView.ViewHolder{
 
-        public TextView bookName, bookType, bookAuthor,bookStatus,bookDescription;
+        public TextView bookName, bookType, bookAuthor,bookStatus,bookDescription,bookDownload;
         public ImageView Photo;
 
         public BookHolder(View itemView) {
@@ -81,6 +84,7 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.BookHold
             bookAuthor =itemView.findViewById(R.id.book_author);
             bookStatus=itemView.findViewById(R.id.book_status);
             bookDescription=itemView.findViewById(R.id.book_description);
+            bookDownload=itemView.findViewById(R.id.book_download);
         }
 
 

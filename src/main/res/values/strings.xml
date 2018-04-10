@@ -29,17 +29,22 @@
     <string name="tab_text_3">Tab 3</string>
 
     <!--Font awesome Icons-->
-    <string name="fa_message">&#xf086;</string>
-    <string name="fa_teacher">&#xf007;</string>
-    <string name="fa_schedule">&#xf073;</string>
-    <string name="fa_attendance">&#xf058;</string>
+    <string name="fa_message">&#xf1d7;</string>
+    <string name="fa_teacher">&#xf21b;</string>
+    <string name="fa_schedule">&#xf022;</string>
+    <string name="fa_attendance">&#xf073;</string>
     <string name="fa_liberary">&#xf1ea;</string>
     <string name="fa_marks">&#xf15c;</string>
-    <string name="fa_academics">&#xf044;</string>
+    <string name="fa_academics">&#xf19d;</string>
     <string name="fa_stars">&#xf005;</string>
     <string name="fa_payments">&#xf09d;</string>
-    <string name="fa_notice">&#xf0f8;
+    <string name="fa_notice">&#xf0f3;</string>
+    <string name="fa_tracking">&#xf041;</string>
 
 
-    </string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_tracking">Map</string>
 </resources>

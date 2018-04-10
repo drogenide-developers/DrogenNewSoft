@@ -19,11 +19,13 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="TextViewFontStyle">
         <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
+
     <style name="SubFrameLayoutWeight1">
-        <item name ="android:layout_width">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:background">#21458f</item>
     </style>
 
@@ -36,6 +38,7 @@
         <item name="android:layout_marginLeft">35dp</item>
 
     </style>
+
     <style name="NormalFontAndSize.MarginLeft170">
         <item name="android:layout_marginLeft">230dp</item>
     </style>
@@ -66,26 +69,25 @@
     </style>
 
 
-
     <!-- Customize Edit Text Style -->
 
     <style name="EditTextMultiline">
-        <item name ="android:layout_width">match_parent</item>
-        <item name ="android:layout_height">0dp</item>
-        <item name="android:fontFamily" >sans-serif-condensed</item>
-        <item name ="android:ems">10</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:ems">10</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:textColorHint">#ffffff</item>
-        <item name ="android:layout_marginBottom">5dp</item>
-        <item name ="android:layout_marginTop">5dp</item>
-        <item name ="android:layout_marginLeft">10dp</item>
-        <item name ="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
         <item name="android:gravity">left</item>
         <item name="android:background">@drawable/backsqforqueries</item>
     </style>
 
 
-    <style name="TextFont" >
+    <style name="TextFont">
         <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 

@@ -4,9 +4,239 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment.PaymentActivity">
-    <android.support.v7.widget.RecyclerView
+    android:orientation="vertical"
+    tools:context="drogenidesoftwares.drogenideschool.payment.PaymentActivity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/payment_recycler"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_student_name"
+            android:layout_weight="1"
+            android:text="Student Name"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_todays_date"
+            android:layout_weight="1"
+            android:text="Todays Date"
+            android:gravity="center"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bordered_blue_curved">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/rl_two"
+            android:background="@drawable/bordered_blue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_tution_fees"
+            android:text="Tution Fees :"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tf_tution_fees"
+            android:layout_toRightOf="@+id/tv_tution_fees"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="25000"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_exam_fees"
+            android:text="Exam Fees : "
+            android:layout_below="@+id/tv_tution_fees"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tf_exam_fees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tf_tution_fees"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_tution_fees"
+            android:layout_toRightOf="@+id/tv_tution_fees"
+            android:gravity="center"
+            android:text="5000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_library_fees"
+                android:text="Library Fees : "
+                android:layout_below="@+id/tv_exam_fees"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tf_library_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tf_exam_fees"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/tv_library_fees"
+                android:layout_toRightOf="@+id/tv_library_fees"
+                android:gravity="center"
+                android:text="2000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_other_fees"
+                android:text="Other Fees :"
+                android:layout_below="@+id/tv_library_fees"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tf_other_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tf_library_fees"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/tv_library_fees"
+                android:layout_toRightOf="@+id/tv_library_fees"
+                android:gravity="center"
+                android:text="10000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_card_fees"
+                android:text="I Card Fees : "
+                android:layout_below="@+id/tv_other_fees"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tf_card_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tf_other_fees"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/tv_card_fees"
+                android:layout_toRightOf="@+id/tv_card_fees"
+                android:gravity="center"
+                android:text="500" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_tax"
+                android:text="Tax  :  "
+                android:layout_below="@+id/tv_card_fees"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:id="@+id/tf_tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tf_card_fees"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_toEndOf="@+id/tv_tax"
+                android:layout_toRightOf="@+id/tv_tax"
+                android:gravity="center"
+                android:text="2000" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_two"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_total_fees"
+                android:text="Total Fees:"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_total_fees"
+                android:layout_toRightOf="@+id/tv_total_fees"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="50000"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_paid_fees"
+                android:text="Paid Fees : "
+                android:layout_below="@+id/tv_total_fees"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tf_paid_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tf_total_fees"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/tv_paid_fees"
+                android:layout_toRightOf="@+id/tv_paid_fees"
+                android:gravity="center"
+                android:text="5000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_remaining_fees"
+                android:text="Remaining Fees : "
+                android:layout_below="@+id/tv_paid_fees"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tf_remaining_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tf_paid_fees"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/tv_remaining_fees"
+                android:layout_toRightOf="@+id/tv_remaining_fees"
+                android:gravity="center"
+                android:text="2000" />
+
+            <Button
+                android:id="@+id/btn_pay_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tf_remaining_fees"
+                android:layout_alignBottom="@+id/tf_remaining_fees"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/login_btn"
+                android:text="Pay Now"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>

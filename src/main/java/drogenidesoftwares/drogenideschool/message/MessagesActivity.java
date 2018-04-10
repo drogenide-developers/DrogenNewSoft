@@ -1,73 +1,62 @@
 package drogenidesoftwares.drogenideschool.message;
 
-import android.animation.Animator;
-import android.content.Intent;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewAnimationUtils;
-import android.view.ViewTreeObserver;
-import android.view.animation.AccelerateInterpolator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
+
+import drogenidesoftwares.drogenideschool.ItemOffSetDecoration;
 import drogenidesoftwares.drogenideschool.R;
 
 public class MessagesActivity extends AppCompatActivity {
-
-    public static final String EXTRA_CIRCULAR_REVEAL_X = "EXTRA_CIRCULAR_REVEAL_X";
-    public static final String EXTRA_CIRCULAR_REVEAL_Y = "EXTRA_CIRCULAR_REVEAL_Y";
-    View rootLayout;
-
-    private int revealX;
-    private int revealY;
-
+    MessageListAdapter msgAdapter;
+    RecyclerView relMessageList;
+    ArrayList<MessageListModel> messageList=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
+        relMessageList=findViewById(R.id.relative_messageList);
+        relMessageList.setHasFixedSize(true);
+        relMessageList.addItemDecoration(new ItemOffSetDecoration(1));
 
-        final Intent intent = getIntent();
+        MessageListModel m=new MessageListModel();
+        m.setMessageId("1");
+        m.setMsg("Hi");
+        m.setMsgDate("01-03-2018");
+        m.setMsgTime("10.00 AM");
+        m.setSenderName("Sachin");
 
-        rootLayout = findViewById(R.id.root_layout);
+        MessageListModel m1=new MessageListModel();
+        m1.setMessageId("2");
+        m1.setMsg("Hi..");
+        m1.setMsgDate("01-03-2018");
+        m1.setMsgTime("10.01 AM");
+        m1.setSenderName("Satish");
 
-        if (savedInstanceState == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP &&
-                intent.hasExtra(EXTRA_CIRCULAR_REVEAL_X) &&
-                intent.hasExtra(EXTRA_CIRCULAR_REVEAL_Y)) {
-            rootLayout.setVisibility(View.INVISIBLE);
+        MessageListModel m2=new MessageListModel();
+        m2.setMessageId("3");
+        m2.setMsg("I have issue in my mobile..");
+        m2.setMsgDate("01-03-2018");
+        m2.setMsgTime("10.03 AM");
+        m2.setSenderName("Sachin");
 
-            revealX = intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_X, 0);
-            revealY = intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_Y, 0);
+        MessageListModel m3=new MessageListModel();
+        m3.setMessageId("4");
+        m3.setMsg("Okay We solve that, come tomorrow at shop...");
+        m3.setMsgDate("04-04-2018");
+        m3.setMsgTime("10.00 AM");
+        m3.setSenderName("Satish");
 
+        messageList.add(m);
+        messageList.add(m1);
+        messageList.add(m2);
+        messageList.add(m3);
 
-            ViewTreeObserver viewTreeObserver = rootLayout.getViewTreeObserver();
-            if (viewTreeObserver.isAlive()) {
-                viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-                    @Override
-                    public void onGlobalLayout() {
-                        revealActivity(revealX, revealY);
-                        rootLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                    }
-                });
-            }
-        } else {
-            rootLayout.setVisibility(View.VISIBLE);
-        }
-    }
-
-    protected void revealActivity(int x, int y) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            float finalRadius = (float) (Math.max(rootLayout.getWidth(), rootLayout.getHeight()) * 1.1);
-
-            // create the animator for this view (the start radius is zero)
-            Animator circularReveal = ViewAnimationUtils.createCircularReveal(rootLayout, x, y, 0, finalRadius);
-            circularReveal.setDuration(4000);
-            circularReveal.setInterpolator(new AccelerateInterpolator());
-
-            // make the view visible and start the animation
-            rootLayout.setVisibility(View.VISIBLE);
-            circularReveal.start();
-        } else {
-            finish();
-        }
+        msgAdapter=new MessageListAdapter(this,messageList);
+        relMessageList.setLayoutManager(new LinearLayoutManager(this));
+        relMessageList.setAdapter(msgAdapter);
     }
 }
